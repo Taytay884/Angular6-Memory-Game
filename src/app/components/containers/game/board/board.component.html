@@ -1,0 +1,3 @@
+<h2>Player Turn: {{playerTurn.player.id}}</h2>
+<app-board-card *ngFor="let card of cards" [card]="card" (handleCardSelect)="onCardSelect($event)"></app-board-card>
+<app-countdown (handleCountdownOver)="onCountdownOver($event)"></app-countdown>

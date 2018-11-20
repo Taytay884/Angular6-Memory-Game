@@ -1,0 +1,25 @@
+.card {
+  display: inline-block;
+  height: 160px;
+  width: 120px;
+  margin: 10px;
+  position: relative;
+  transition: 0.5s ease-in-out;
+  transform-style: preserve-3d;
+  border: 1px solid black; }
+  .card-flipped {
+    transform: rotateY(180deg); }
+  .card-back {
+    background-color: turquoise;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    backface-visibility: hidden; }
+  .card-front {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0; }
+
+/*# sourceMappingURL=card.component.css.map */

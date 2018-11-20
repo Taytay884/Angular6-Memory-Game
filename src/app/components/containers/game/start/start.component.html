@@ -1,0 +1,16 @@
+<div>
+  <h1>Choose how many players:</h1>
+  <div>
+    <label *ngFor="let playerAmount of maxPlayersAmount; let i = index">
+      Players {{i + 1}}
+      <input
+        id="{{'players-amount-' + (i + 1)}}"
+        type="radio" name="players-amount"
+        (change)="onPlayersAmountChanged(i + 1)"
+        [checked]="selectedPlayersAmount === i + 1">
+    </label>
+  </div>
+  <div>
+    <button (click)="onGameStart()">Start</button>
+  </div>
+</div>

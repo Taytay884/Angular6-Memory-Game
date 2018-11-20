@@ -1,0 +1,9 @@
+<div>
+  <ul>
+    <li *ngFor="let player of players">
+      <h4>Player {{ player.id }} | Score: {{ player.score }}</h4>
+    </li>
+  </ul>
+
+  <button (click)="onNewGameButtonClicked()">New Game?</button>
+</div>

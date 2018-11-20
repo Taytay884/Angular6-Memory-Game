@@ -1,0 +1,8 @@
+<h2>{{chosenName ? 'Welcome, ' + chosenName + ' hope you enjoy the game!' : 'Hello There, what is your name?'}}</h2>
+
+<form [hidden]="chosenName" (submit)="onLoginFormSubmit($event)">
+  <label>Name:</label>
+  <input [formControl]="name" type="text">
+  <button type="submit" class="submit-button" [disabled]="isLoading">Login</button>
+</form>
+

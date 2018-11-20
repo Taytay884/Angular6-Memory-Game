@@ -1,0 +1,6 @@
+<h1>Memory Game!</h1>
+<div [ngSwitch]="currGameStatus">
+  <app-game-start (handleGameStart)="startGame($event)" *ngSwitchCase="gameStatus.start"></app-game-start>
+  <app-game-board (handleGameOver)="onGameOver($event)" [players]="players" *ngSwitchCase="gameStatus.inGame"></app-game-board>
+  <app-game-end (handleNewGame)="resetGame($event)" [players]="players" *ngSwitchCase="gameStatus.gameOver"></app-game-end>
+</div>
